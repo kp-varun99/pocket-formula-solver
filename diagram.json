@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "author": "Varun Kotra",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": 0, "left": 0, "attrs": {} },
+    { "type": "lcd1602", "id": "lcd1", "top": -120, "left": 150, "attrs": { "pins": "i2c" } },
+    { "type": "keyboard-matrix", "id": "keypad1", "top": 120, "left": -180, "attrs": { "rows": "4", "cols": "4" } }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor", "RX", "" ],
+    [ "esp:RX", "$serialMonitor", "TX", "" ],
+    [ "lcd1:GND", "esp:GND.1", "black", [ "v0" ] ],
+    [ "lcd1:VCC", "esp:3V3", "red", [ "v0" ] ],
+    [ "lcd1:SDA", "esp:21", "green", [ "v0" ] ],
+    [ "lcd1:SCL", "esp:22", "blue", [ "v0" ] ],
+    [ "keypad1:R1", "esp:13", "green", [ "v0" ] ],
+    [ "keypad1:R2", "esp:12", "green", [ "v0" ] ],
+    [ "keypad1:R3", "esp:14", "green", [ "v0" ] ],
+    [ "keypad1:R4", "esp:27", "green", [ "v0" ] ],
+    [ "keypad1:C1", "esp:26", "orange", [ "v0" ] ],
+    [ "keypad1:C2", "esp:25", "orange", [ "v0" ] ],
+    [ "keypad1:C3", "esp:33", "orange", [ "v0" ] ],
+    [ "keypad1:C4", "esp:32", "orange", [ "v0" ] ]
+  ]
+}
