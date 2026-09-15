@@ -19,4 +19,8 @@
 	*created project structure in firmware and platformio 
 	*implemented 4x4 matrix keypad and lcd code
 	*installed platformio and resolved workplace errors
+
+## Session: Sept 14, 2026  (Duration: 30 mins)
+	*attempted to start wokwi simulation
+	*fixed problems with esp32 source code not compiling in vs code
 	
